@@ -1,6 +1,6 @@
 🔎 Bing Blitz 🔎
 
-This is a simple Python script that allows you to search for multiple queries on Bing at once. Simply enter your queries into a text file, run the script, and watch as it performs the searches for you.
+This is a simple Python script that allows you to search for multiple queries on Bing at once.
 
 📝 Notes 📝
 
