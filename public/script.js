@@ -4,13 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // get the value from local storage
     const searches = localStorage.getItem("searches");
     // set the value to the input
-    document.getElementById("searches").value = searches;
+    const inputField = document.getElementById("searches");
+    inputField.value = searches;
   }
 
-  // get the button
-  const btn = document.getElementById("btn");
-  // add event listener to the button
-  btn.addEventListener("click", () => {
+  // get the form
+  const form = document.getElementById("myForm");
+  // add event listener to the form
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
     // get the search count and store it in local storage
     const searches = document.getElementById("searches").value;
     localStorage.setItem("searches", searches);

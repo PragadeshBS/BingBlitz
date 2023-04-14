@@ -20,20 +20,23 @@
             </div>
             <div class="my-3">
               <!-- input field to get the no. of searches to perform -->
-              <div>
-                <input
-                  type="number"
-                  id="searches"
-                  class="mx-auto w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Enter no. of searches to perform"
-                />
-              </div>
-              <button
-                id="btn"
-                class="my-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              >
-                Go!
-              </button>
+              <form id="myForm">
+                <div>
+                  <input
+                    type="number"
+                    id="searches"
+                    class="mx-auto w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Enter no. of searches to perform"
+                    autofocus
+                  />
+                </div>
+                <button
+                  id="btn"
+                  class="my-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                >
+                  Go!
+                </button>
+              </form>
               <div class="text-xl text-gray-500 dark:text-gray-300">
                 Ensure that you have
                 <span class="font-black"> allowed pop-ups and redirects </span>
