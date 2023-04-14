@@ -26,7 +26,6 @@
                   id="searches"
                   class="mx-auto w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Enter no. of searches to perform"
-                  value="10"
                 />
               </div>
               <button
@@ -35,9 +34,10 @@
               >
                 Go!
               </button>
-              <div class="text-xs text-gray-500 dark:text-gray-300">
-                Ensure that you have allowed pop-ups and redirects from this
-                site
+              <div class="text-xl text-gray-500 dark:text-gray-300">
+                Ensure that you have
+                <span class="font-black"> allowed pop-ups and redirects </span>
+                from this site
               </div>
             </div>
           </div>
@@ -62,34 +62,6 @@
         </div>
       </body>
     </div>
-    <script>
-      // get the button
-      const btn = document.getElementById("btn");
-      // add event listener to the button
-      btn.addEventListener("click", () => {
-        // get the search count
-        const searches = document.getElementById("searches").value;
-        // check if the search count is valid
-        if (searches > 0 && searches <= 40) {
-          // loop through the search count
-          for (let i = 0; i < searches; i++) {
-            // create a link
-            let num = Math.floor(Math.random() * 99999999);
-            const a = document.createElement("a");
-            a.href = "https://www.bing.com/search?q=" + num;
-            a.referrerPolicy = "no-referrer";
-            a.textContent = num;
-            a.target = "_blank";
-            const div = document.createElement("div");
-            div.append(a);
-            document.body.append(div);
-            a.click();
-            div.style.display = "none";
-          }
-        } else {
-          alert("Please enter a valid search count");
-        }
-      });
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
