@@ -4,7 +4,8 @@
   "description": "🔎 Bing Blitz 🔎",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./public/input.css -o ./public/styles.css -w"
   },
   "repository": {
     "type": "git",
