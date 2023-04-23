@@ -19,20 +19,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // check if the search count is valid
     if (searches > 0 && searches <= 40) {
       // loop through the search count
-      for (let i = 0; i < searches; i++) {
-        // create a link
-        let num = Math.floor(Math.random() * 99999999);
-        const a = document.createElement("a");
-        a.href = "https://www.bing.com/search?q=" + num;
-        a.referrerPolicy = "no-referrer";
-        a.textContent = num;
-        a.target = "_blank";
-        const div = document.createElement("div");
-        div.append(a);
-        document.body.append(div);
-        a.click();
-        div.style.display = "none";
-      }
+      fetch(`https://random-word-api.herokuapp.com/word?number=${searches}`)
+        .then((res) => res.json())
+        .then((data) => {
+          for (let i = 0; i < searches; i++) {
+            // create a link
+            const a = document.createElement("a");
+            a.href = "https://www.bing.com/search?q=" + data[i];
+            a.referrerPolicy = "no-referrer";
+            a.textContent = data[i];
+            a.target = "_blank";
+            const div = document.createElement("div");
+            div.append(a);
+            document.body.append(div);
+            a.click();
+            div.style.display = "none";
+          }
+        });
     } else {
       alert("Please enter a valid search count");
     }
