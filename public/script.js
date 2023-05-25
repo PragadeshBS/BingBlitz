@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // check if the search count is valid
     if (searches > 0 && searches <= 40) {
       // loop through the search count
-      fetch(`https://random-word-api.herokuapp.com/word?number=${searches}`)
+      fetch(`https://random-word-api.vercel.app/api?words=${searches}`)
         .then((res) => res.json())
         .then((data) => {
           for (let i = 0; i < searches; i++) {
